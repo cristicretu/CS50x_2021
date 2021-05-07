@@ -18,7 +18,7 @@ typedef struct node
 node;
 
 // Number of buckets in hash table
-const unsigned int N = 1000;
+const unsigned int N = 100000;
 unsigned int dictionary_size = 0;
 
 // Hash table
