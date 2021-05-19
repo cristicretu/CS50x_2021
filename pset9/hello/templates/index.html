@@ -5,6 +5,9 @@
         <title>My web app</title>
     </head>
     <body>
-        hello, {{ name  }}
+        <form action="/greet" method="get">
+            <input name="name" type="text">
+            <input type="submit">
+        </form>
     </body>
 </html>
