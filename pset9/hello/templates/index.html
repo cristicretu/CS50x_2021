@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-    
-<html lang="en">
-    <head>
-        <title>My web app</title>
-    </head>
-    <body>
-        <form action="/greet" method="get">
-            <input name="name" type="text">
-            <input type="submit">
-        </form>
-    </body>
-</html>
+{% extends 'layout.html' %}
+
+{% block body %}
+<form action="/greet" method="post">
+    <input name="name" type="text">
+    <input type="submit">
+</form>
+
+{% endblock %}
