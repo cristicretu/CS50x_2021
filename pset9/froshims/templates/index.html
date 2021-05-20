@@ -2,17 +2,7 @@
 
 {% block body %}
 
-<h1>Register</h1>
-
-<form action="/register" method="post">
-    <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-    <select name="sport">
-        <option value="" disabled selected>Sport</option>
-        {% for sport in sports %}
-            <option value="{{ sport }}">{{ sport }}</option>
-        {% endfor %}
-    </select>
-    <input type="submit" value="Register">
-</form>
+<h1>You are not logged in.</h1>
+<h2>Please log in using <a href="/login">this link</a></h2>
 
 {% endblock %}

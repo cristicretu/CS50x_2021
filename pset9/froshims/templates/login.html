@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form action="/login" method="post">
+    <input autocomplete="off" autofocus name="name" type="text" placeholder="Name">
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
