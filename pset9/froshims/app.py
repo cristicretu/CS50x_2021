@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request
+from cs50 import SQL
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
-REGISTRANT = {}
+db = SQL("sqlite:///froshims.db")
 
 SPORTS = [
     "Dodgeball",
@@ -27,6 +28,8 @@ def register():
     if sport not in SPORTS:
         return render_template("error.html", message="Invalid sport")
     
-    REGISTRANT[name] = sport
-    return render_template("succes.html")
-    
+    return redirect("/registrants")
+
+@app.route("/registrants")
+def registrants():
+    return render_template("registrants.html", registrants=REGISTRANT)
