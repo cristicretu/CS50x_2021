@@ -2,12 +2,14 @@ import UIKit
 
 // Search inspired from here:
 // https://stackoverflow.com/questions/41663233/tableview-search-in-swift
+// https://www.youtube.com/watch?v=EU7gunaGYCg
+// https://github.com/codepath/ios_guides/wiki/Search-Bar-Guide
 
 class PokemonListViewController: UITableViewController, UISearchBarDelegate {
     @IBOutlet var searchBar: UISearchBar!
     
     var pokemon: [PokemonListResult] = []
-    var filteredPokemon: [PokemonListResult]!
+    var filteredPokemon: [PokemonListResult] = []
     
     func capitalize(text: String) -> String {
         return text.prefix(1).uppercased() + text.dropFirst()
@@ -43,15 +45,14 @@ class PokemonListViewController: UITableViewController, UISearchBarDelegate {
     
     // This method updates filteredData based on the text in the Search Box
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // When there is no text, filteredData is the same as the original data
-        // When user has entered text into the search box
-        // Use the filter method to iterate over all items in the data array
-        // For each item, return true if the item should be included and false if the
-        // item should NOT be included
-        filteredPokemon = searchText.isEmpty ? pokemon : pokemon.filter({(pokemonString: PokemonListResult) -> Bool in
-            // If dataItem matches the searchText, return true to include it
-            return pokemonString.range(of: searchText, options: .caseInsensitive) != nil
-        })
+        
+        if searchBar.text == nil || searchBar.text == "" {
+        }
+        else
+        {
+            let lower = searchBar.text!.lowercased()
+            filteredPokemon = pokemon.filter({$0.name.range(of: lower) != nil})
+        }
 
         tableView.reloadData()
     }
