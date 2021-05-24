@@ -23,3 +23,13 @@ struct PokemonTypeEntry: Codable {
 struct PokemonType: Codable {
     let name: String
 }
+
+struct PokemonSprite: Codable {
+    let name: String
+    let sprites: PokemonSpriteEntry
+}
+
+struct PokemonSpriteEntry: Codable {
+    let front_default: String
+    let front_shiny: String
+}

@@ -52,10 +52,15 @@ class PokemonViewController: UIViewController {
             guard let data = data else {
                 return
             }
-
             do {
                 let result = try JSONDecoder().decode(PokemonResult.self, from: data)
+                let result2 = try JSONDecoder().decode(PokemonSprite.self, from: data)
+            
+                let spriteURL = URL(string: result2.sprites.front_default)
+                let pokeData = try Data(contentsOf: spriteURL!)
+                
                 DispatchQueue.main.async {
+                    self.pokemonImage.image = UIImage(data: pokeData)
                     self.navigationItem.title = self.capitalize(text: result.name)
                     self.nameLabel.text = self.capitalize(text: result.name)
                     self.numberLabel.text = String(format: "#%03d", result.id)
