@@ -50,7 +50,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Pokédex" id="V9g-JY-90g"/>
                     <connections>
-                        <outlet property="searchField" destination="gT9-59-IUd" id="cmN-s1-7dz"/>
+                        <outlet property="searchBar" destination="gT9-59-IUd" id="FP8-E0-g1A"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZI-5h-QhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
