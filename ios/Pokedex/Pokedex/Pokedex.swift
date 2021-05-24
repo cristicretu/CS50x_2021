@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+
+struct Pokedex {
+    var caught = [String: Bool]()
+}

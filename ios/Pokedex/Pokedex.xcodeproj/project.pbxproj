@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16088853265BE32C00B9B3B0 /* Pokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16088852265BE32C00B9B3B0 /* Pokedex.swift */; };
 		9304ABF1236558F1002BD254 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304ABF0236558F1002BD254 /* Pokemon.swift */; };
 		9371B120231EE27E00A9246F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371B11F231EE27E00A9246F /* AppDelegate.swift */; };
 		9371B122231EE27E00A9246F /* PokemonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371B121231EE27E00A9246F /* PokemonListViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16088852265BE32C00B9B3B0 /* Pokedex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokedex.swift; sourceTree = "<group>"; };
 		9304ABF0236558F1002BD254 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		9371B11C231EE27E00A9246F /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9371B11F231EE27E00A9246F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				9371B128231EE28000A9246F /* LaunchScreen.storyboard */,
 				9371B12B231EE28000A9246F /* Info.plist */,
 				9304ABF0236558F1002BD254 /* Pokemon.swift */,
+				16088852265BE32C00B9B3B0 /* Pokedex.swift */,
 			);
 			path = Pokedex;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				9371B122231EE27E00A9246F /* PokemonListViewController.swift in Sources */,
 				9304ABF1236558F1002BD254 /* Pokemon.swift in Sources */,
+				16088853265BE32C00B9B3B0 /* Pokedex.swift in Sources */,
 				9371B120231EE27E00A9246F /* AppDelegate.swift in Sources */,
 				9371B132231EFBEC00A9246F /* PokemonViewController.swift in Sources */,
 			);

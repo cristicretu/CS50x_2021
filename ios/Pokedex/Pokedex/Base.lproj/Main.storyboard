@@ -104,6 +104,10 @@
                                     <action selector="toggleCatch:" destination="yFp-uv-eEo" eventType="touchUpInside" id="4VO-qb-aLN"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3a-lu-LVK">
+                                <rect key="frame" x="87" y="188" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cVc-In-IFv"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,6 +116,7 @@
                         <outlet property="catchButton" destination="GyQ-h7-mae" id="Rib-2N-ZDg"/>
                         <outlet property="nameLabel" destination="Zti-lO-HCX" id="4yz-Df-XpM"/>
                         <outlet property="numberLabel" destination="Sja-25-iqf" id="cj5-fb-cuF"/>
+                        <outlet property="pokemonImage" destination="a3a-lu-LVK" id="0yM-Ra-Qz2"/>
                         <outlet property="type1Label" destination="pSm-0Z-rVe" id="OOi-5I-FB3"/>
                         <outlet property="type2Label" destination="y6E-8v-JhD" id="tYD-3Y-dRf"/>
                     </connections>

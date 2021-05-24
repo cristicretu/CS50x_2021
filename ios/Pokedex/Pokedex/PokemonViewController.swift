@@ -1,5 +1,11 @@
 import UIKit
 
+// Catch function:
+// https://github.com/casualc0der/Pokedex
+
+var savedData = UserDefaults.standard
+var pokedex = Pokedex.init(caught: [ : ])
+
 class PokemonViewController: UIViewController {
     var url: String!
 
@@ -8,6 +14,7 @@ class PokemonViewController: UIViewController {
     @IBOutlet var type1Label: UILabel!
     @IBOutlet var type2Label: UILabel!
     @IBOutlet weak var catchButton: UIButton!
+    @IBOutlet weak var pokemonImage: UIImageView!
     
     var isCatched = false
     
@@ -15,9 +22,13 @@ class PokemonViewController: UIViewController {
         if isCatched == false {
             catchButton.setTitle("Release", for: .normal)
             isCatched = true
+            savedData.set(true, forKey: (nameLabel.text)!)
+            pokedex.caught[nameLabel.text!] = true
         } else {
             catchButton.setTitle("Catch", for: .normal)
             isCatched = false
+            savedData.set(false, forKey: (nameLabel.text)!)
+            pokedex.caught[nameLabel.text!] = true
         }
     }
     
@@ -56,6 +67,18 @@ class PokemonViewController: UIViewController {
                         else if typeEntry.slot == 2 {
                             self.type2Label.text = typeEntry.type.name
                         }
+                    }
+                    
+                    if savedData.bool(forKey: self.nameLabel.text!) == true {
+                        pokedex.caught[self.nameLabel.text!] = true
+                    } else {
+                        pokedex.caught[self.nameLabel.text!] = false
+                    }
+                    
+                    if pokedex.caught[self.nameLabel.text!] == false || pokedex.caught[self.nameLabel.text!] == nil {
+                        self.catchButton.setTitle("Catch", for: .normal)
+                    } else if pokedex.caught[self.nameLabel.text!] == true {
+                        self.catchButton.setTitle("Release", for: .normal)
                     }
                 }
             }
