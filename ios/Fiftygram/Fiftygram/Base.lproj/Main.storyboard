@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynd-Hf-4n7">
-                                <rect key="frame" x="136" y="514" width="142" height="68"/>
+                                <rect key="frame" x="35" y="514" width="142" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Sepia"/>
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwY-V9-KpN">
-                                <rect key="frame" x="136" y="590" width="142" height="68"/>
+                                <rect key="frame" x="231" y="514" width="142" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Noir"/>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4N5-ac-Hkj">
-                                <rect key="frame" x="136" y="666" width="142" height="68"/>
+                                <rect key="frame" x="35" y="597" width="142" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Vintage"/>
@@ -48,12 +48,22 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6u-Cq-WWv">
-                                <rect key="frame" x="175" y="754" width="73" height="48"/>
+                                <rect key="frame" x="266" y="607" width="73" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Invert"/>
                                 <connections>
                                     <action selector="applyInvert" destination="BYZ-38-t0r" eventType="touchUpInside" id="TTM-lc-dqU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkx-bs-sAq">
+                                <rect key="frame" x="179" y="758" width="60" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
+                                <state key="normal" title="Save!"/>
+                                <connections>
+                                    <action selector="saveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZSD-9U-06h"/>
+                                    <action selector="savePhoto" destination="BYZ-38-t0r" eventType="touchUpInside" id="X4V-dg-TPF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,7 +73,7 @@
                     <navigationItem key="navigationItem" title="Fiftygram" id="BE2-AU-7lP">
                         <barButtonItem key="rightBarButtonItem" title="Choose Photo" id="6iY-Ms-s20">
                             <connections>
-                                <action selector="choosePhoto:" destination="BYZ-38-t0r" id="lXv-rT-Qjv"/>
+                                <action selector="choosePhoto" destination="BYZ-38-t0r" id="qhl-wb-CcR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
